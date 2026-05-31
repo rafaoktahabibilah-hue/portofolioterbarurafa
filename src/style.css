@@ -198,6 +198,50 @@ input, textarea { cursor: none; }
   line-height: 1.7;
 }
 
+.about-photo-frame {
+    width: 140px; height: 170px;
+    margin: 0 auto 10px;
+  }
+  .about-photo-badge { margin: 0 auto 24px; display: table; }
+  .about-counter { text-align: center; }
+.about-photo-frame img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.about-photo-badge {
+  display: inline-block;
+  font-size: 9px; text-transform: uppercase;
+  letter-spacing: 0.1em; color: rgba(255,255,255,0.3);
+  border: 0.5px solid rgba(255,255,255,0.08);
+  padding: 4px 10px; border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+.about-bio-block {
+  margin-top: 28px;
+}
+.about-bio-text {
+  font-size: 12px; color: rgba(255,255,255,0.3);
+  line-height: 1.8; margin-bottom: 18px;
+}
+.about-bio-text strong {
+  color: rgba(255,255,255,0.7); font-weight: 500;
+}
+.about-achievements {
+  display: flex; flex-direction: column; gap: 8px;
+}
+.ach-item {
+  display: flex; align-items: flex-start; gap: 8px;
+}
+.ach-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: #fff; flex-shrink: 0; margin-top: 6px;
+  opacity: 0.3;
+}
+.ach-item span:last-child {
+  font-size: 11px; color: rgba(255,255,255,0.2);
+  line-height: 1.6;
+}
+
 /* SECTIONS */
 .section-sub {
   background: #0d0d14;
