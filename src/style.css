@@ -266,6 +266,37 @@ input, textarea { cursor: none; }
   max-width: 1100px; margin-left: auto; margin-right: auto;
 }
 
+/* EXPERIENCE */
+.exp-card {
+  max-width: 1100px; margin: 0 auto;
+  background: rgba(255,255,255,0.01);
+  border: 0.5px solid rgba(255,255,255,0.06);
+  border-radius: 4px; padding: 24px 28px;
+}
+.exp-row {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; gap: 20px;
+}
+.exp-company {
+  font-size: 18px; font-weight: 700;
+  color: #fff; margin-bottom: 4px;
+}
+.exp-role {
+  font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.08em; color: rgba(255,255,255,0.3);
+  margin-bottom: 10px;
+}
+.exp-desc {
+  font-size: 12px; color: rgba(255,255,255,0.25);
+  line-height: 1.7; max-width: 600px;
+}
+.exp-badge {
+  font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.08em; color: rgba(255,255,255,0.2);
+  border: 0.5px solid rgba(255,255,255,0.08);
+  padding: 4px 12px; border-radius: 2px; flex-shrink: 0;
+}
+
 /* SKILLS */
 .skills-grid {
   max-width: 1100px; margin: 0 auto;
