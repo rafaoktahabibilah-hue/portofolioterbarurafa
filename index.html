@@ -1,158 +1,309 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/jpeg" href="/logoporto.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="RAFA OKTA HABIBILAH — Game Developer, Coder, Content Creator" />
+    <meta name="description" content="HALFTONE — Portofolio visual Rafa dengan estetika risograph dan efek misprint" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400..800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/src/style.css" />
-    <title>RAFA OKTA HABIBILAH — Portfolio</title>
+    <title>HALFTONE — RAFA OKTA HABIBILAH</title>
   </head>
   <body>
-    <div id="page-overlay"></div>
-    <div id="scroll-bar"></div>
-    <div id="cursor"></div>
-    <div id="cursor-ring"></div>
-    <div id="grain"></div>
-
-    <header id="navbar">
-      <a href="#hero" class="nav-logo">RAFA.</a>
+    <header class="site">
+      <a href="#hero" class="nav-logo">HALFTONE.</a>
       <nav class="nav-c">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
+        <a href="#hero">Beranda</a>
+        <a href="#idea">Idea</a>
+        <a href="#inks">Inks</a>
+        <a href="#process">Process</a>
+        <a href="#machine">Machine</a>
+        <a href="#grain">Grain</a>
+        <a href="#pile">Pile</a>
       </nav>
     </header>
 
     <main>
-      <!-- HERO -->
-      <section id="hero">
-        <div class="dot-grid"></div>
-        <canvas id="particle-canvas"></canvas>
-        <div class="hero-content">
-          <p class="hero-greeting reveal" data-delay="0">Hi, I'm</p>
-          <h1 class="hero-name reveal" data-delay="0.2">Rafa Okta<br>Habibilah</h1>
-          <p class="hero-role reveal" data-delay="0.4">
-            <span id="typewriter"></span><span class="cursor-blink">|</span>
-          </p>
-          <div class="hero-cta reveal" data-delay="0.6">
-            <a href="#projects" class="btn-purple">See My Work</a>
-            <a href="#blog" class="btn-ghost">Read My Blog</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section id="about" class="section reveal">
-        <div class="section-inner about-layout">
-          <div class="about-photo">
-            <div class="photo-wrap">
-              <img src="/foto.jpg" alt="Rafa Okta Habibilah" />
+      <!-- SECTION 1 - HERO -->
+      <section id="hero" class="tint-pink rv">
+        <div class="section-inner hero">
+          <div>
+            <span class="label rv">Section 1</span>
+            <h1 class="rv">Rol kamera Anda, dibuat <span class="misprint">fisik.</span></h1>
+            <p class="lead rv">Website ini mengeksplorasi estetika risograph print dengan efek misprint, grain overlay, dan duotone filter.</p>
+            <div class="metrics">
+              <div class="metric-div rv">
+                <span class="num">3</span>
+                <span class="lab">Proyek Unggulan</span>
+              </div>
+              <div class="metric-div rv">
+                <span class="num">8+</span>
+                <span class="lab">Foto Risograph</span>
+              </div>
+              <div class="metric-div rv">
+                <span class="num">100%</span>
+                <span class="lab">Manual Set</span>
+              </div>
             </div>
           </div>
-          <div class="about-text">
-            <p class="sec-label">About</p>
-            <h2 class="sec-title">Vibe Coder ×<br>Game Developer</h2>
-            <p class="about-p">Halo! Saya <strong>Rafa Okta Habibilah</strong>, siswa jurusan Pengembangan Gim di <strong>SMK Telkom Purwokerto</strong>. Selain ngoding & bikin game, saya juga hobi ngonten, editing video, dan eksplorasi AI tools kayak <strong>OpenRouter</strong> & <strong>HuggingFace</strong>. Perjalanan dari MI Diponegoro 3, SMPN 5 Purwokerto, sampai sekarang — semua dibangun dengan rasa ingin tahu.</p>
-            <div class="about-stats">
-              <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Projects</span></div>
-              <div class="stat"><span class="stat-num">2</span><span class="stat-label">Achievements</span></div>
-              <div class="stat"><span class="stat-num">1</span><span class="stat-label">Game Jam Win</span></div>
+          <div class="hero-visual rv">
+            <div class="hero-img duo">
+              <img src="Fotogw.jpeg" alt="Hero" />
+            </div>
+            <div class="before-card duo">
+              <img src="https://picsum.photos/id/1025/400/300" alt="Before" />
+            </div>
+            <div class="picker">
+              <button data-dark="#ff48b0" data-light="#2a56d6">
+                <span class="swatch" style="background:#ff48b0"></span>Pink+Blue
+              </button>
+              <button data-dark="#ffd600" data-light="#0fa3a3">
+                <span class="swatch" style="background:#ffd600"></span>Yellow+Teal
+              </button>
+              <button data-dark="#ff5a1f" data-light="#7c3aed">
+                <span class="swatch" style="background:#ff5a1f"></span>Orange+Purple
+              </button>
+            </div>
+            <div class="drums">
+              <div class="drum d1"></div>
+              <div class="drum d2"></div>
+            </div>
+            <svg class="arrow" viewBox="0 0 200 100">
+              <path d="M8 9C72 18 126 48 151 102" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="8 5" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2 - THE IDEA -->
+      <section id="idea" class="tint-blue rv">
+        <div class="section-inner">
+          <span class="label rv">Section 2</span>
+          <h2 class="rv">The Idea</h2>
+          <div class="split">
+            <div>
+              <p class="rv">Risograph printing adalah teknik cetak digital yang menghasilkan efek unik seperti misprint, grain, dan warna duotone. Website ini mereplikasi estetika itu dengan HTML/CSS murni.</p>
+              <div class="quote-card rv">
+                <p>"Setiap cetakan risograph memiliki karakter uniknya sendiri—tidak ada yang benar-benar sama."</p>
+                <span class="who">— Rafa, SMK Telkom</span>
+              </div>
+            </div>
+            <div class="collage">
+              <div class="frame small duo rv">
+                <img src="https://picsum.photos/id/1080/600/700" alt="Small collage" />
+              </div>
+              <div class="frame big duo rv">
+                <img src="https://picsum.photos/id/64/800/1100" alt="Big collage" />
+              </div>
+              <div class="tape t1"></div>
+              <div class="tape t2"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- EXPERIENCE -->
-      <section id="experience" class="section reveal">
+      <!-- SECTION 3 - THE INKS -->
+      <section id="inks" class="tint-yellow rv">
         <div class="section-inner">
-          <p class="sec-label">Experience</p>
-          <h2 class="sec-title">Where I've<br>Worked</h2>
-          <div class="exp-card">
-            <div class="exp-info">
-              <h3 class="exp-name">Rijanara</h3>
-              <p class="exp-role">Freelance Web Developer</p>
-              <p class="exp-desc">Mengerjakan website milik klien secara freelance dan dibayar. Proyek ini mengasah skill web dev, komunikasi, dan deliver hasil profesional.</p>
+          <span class="label rv">Section 3</span>
+          <h2 class="rv">The Inks</h2>
+          <div class="split">
+            <div>
+              <p class="rv">Palet warna duotone menggunakan kombinasi dua warna dengan blend mode multiply dan screen untuk efek cetak risograph yang khas.</p>
             </div>
-            <div class="exp-tag">Freelance</div>
-          </div>
-          <div class="exp-img">
-            <img src="/rijanara.png" alt="Rijanara Project" />
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-      <section id="projects" class="section reveal">
-        <div class="section-inner">
-          <p class="sec-label">Projects</p>
-          <h2 class="sec-title">Stuff I've<br>Built</h2>
-          <div class="bento-grid" id="projectsGrid"></div>
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills" class="section reveal">
-        <div class="section-inner">
-          <p class="sec-label">Skills</p>
-          <h2 class="sec-title">Tools &<br>Tech Stack</h2>
-          <div class="skills-wrap" id="skillsWrap"></div>
-        </div>
-      </section>
-
-      <!-- BLOG -->
-      <section id="blog" class="section reveal">
-        <div class="section-inner">
-          <p class="sec-label">Blog</p>
-          <h2 class="sec-title">Notes &<br>Thoughts</h2>
-          <div class="blog-grid" id="blogGrid"></div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="section reveal">
-        <div class="section-inner">
-          <p class="sec-label">Contact</p>
-          <h2 class="sec-title">Let's<br>Talk</h2>
-          <div class="contact-layout">
-            <form id="contactForm" class="contact-form">
-              <div class="field"><input type="text" name="name" placeholder="Nama" required /></div>
-              <div class="field"><input type="email" name="email" placeholder="Email" required /></div>
-              <div class="field"><textarea name="message" placeholder="Tulis pesan..." required></textarea></div>
-              <button type="submit" class="btn-purple" id="submitBtn">Kirim Pesan</button>
-            </form>
-            <div class="social-col">
-              <p class="social-title">Find me on</p>
-              <a href="https://github.com/rafaokta" target="_blank" rel="noopener" class="social-link">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                <span>GitHub</span>
-              </a>
-              <a href="https://linkedin.com/in/rafaoktahabibilah" target="_blank" rel="noopener" class="social-link">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                <span>LinkedIn</span>
-              </a>
-              <a href="https://instagram.com/rafaokta" target="_blank" rel="noopener" class="social-link">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m.2 2A3.6 3.6 0 004.4 7.6v8.8C4.4 18.39 6.01 20 8 20h8a3.6 3.6 0 003.6-3.6V7.6C19.6 5.61 17.99 4 16 4H8m9.5 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5M12 7a5 5 0 015 5 5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5m0 2a3 3 0 00-3 3 3 3 0 003 3 3 3 0 003-3 3 3 0 00-3-3z"/></svg>
-                <span>Instagram</span>
-              </a>
-              <a href="https://tiktok.com/@Microxx6" target="_blank" rel="noopener" class="social-link">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.072 0H13.0278V16.3478C13.0278 18.2957 11.4722 19.8957 9.53626 19.8957C7.60034 19.8957 6.04469 18.2957 6.04469 16.3478C6.04469 14.4348 7.56577 12.8696 9.43257 12.8V8.69567C5.31872 8.7652 2 11.9261 2 16.3478C2 20.7783 5.38786 24 9.5701 24C13.7523 24 17.1402 20.7783 17.1402 16.3478V7.9652C18.6613 9.07827 20.5296 9.73913 22.5 9.77393V5.66957C19.4579 5.56522 17.072 3.06087 17.072 0Z"/></svg>
-                <span>TikTok (@Microxx6)</span>
-              </a>
+            <div class="grid">
+              <div class="ink-card tall duo rv">
+                <img src="https://picsum.photos/id/1015/400/600" alt="Ink 1" />
+                <div class="label-row">Pink+Blue <span>#ff48b0+#2a56d6</span></div>
+              </div>
+              <div class="ink-card short duo rv">
+                <img src="https://picsum.photos/id/1016/400/400" alt="Ink 2" />
+                <div class="label-row">Yellow+Teal <span>#ffd600+#0fa3a3</span></div>
+              </div>
+              <div class="ink-card tall duo rv">
+                <img src="https://picsum.photos/id/1039/400/600" alt="Ink 3" />
+                <div class="label-row">Orange+Purple <span>#ff5a1f+#7c3aed</span></div>
+              </div>
+              <div class="ink-card short duo rv">
+                <img src="https://picsum.photos/id/1043/400/400" alt="Ink 4" />
+                <div class="label-row">Custom Duo <span>#7c3aed+#0fa3a3</span></div>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4 - THE PROCESS -->
+      <section id="process" class="tint-purple rv">
+        <div class="section-inner">
+          <span class="label rv">Section 4</span>
+          <h2 class="rv">The Process</h2>
+          <div class="grid">
+            <div class="step rv">
+              <div class="num">1</div>
+              <h3>Upload Foto</h3>
+              <p>Pilih foto dari rol kamera atau upload gambar sendiri.</p>
+            </div>
+            <div class="step rv">
+              <div class="num">2</div>
+              <h3>Pilih Ink Pair</h3>
+              <p>Tentukan kombinasi dua warna untuk efek duotone.</p>
+            </div>
+            <div class="step rv">
+              <div class="num">3</div>
+              <h3>Adjust Grain</h3>
+              <p>Atur tingkat grain overlay dan misprint offset.</p>
+            </div>
+            <div class="step rv">
+              <div class="num">4</div>
+              <h3>Print & Ship</h3>
+              <p>Cetak menggunakan mesin risograph dan kirim fisik.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5 - THE MACHINE -->
+      <section id="machine" class="tint-flood rv">
+        <div class="section-inner">
+          <span class="label rv">Section 5</span>
+          <h2 class="rv">The Machine</h2>
+          <div class="split">
+            <div class="blueprint rv">
+              <svg viewBox="0 0 640 460">
+                <rect x="40" y="60" width="560" height="340" fill="none" stroke="currentColor" stroke-width="2" />
+                <circle cx="300" cy="200" r="80" fill="var(--pink)" stroke="currentColor" stroke-width="2" />
+                <circle cx="180" cy="140" r="14" fill="var(--paper)" stroke="currentColor" stroke-width="1.5" />
+                <circle cx="400" cy="140" r="14" fill="var(--paper)" stroke="currentColor" stroke-width="1.5" />
+                <circle cx="180" cy="260" r="14" fill="var(--paper)" stroke="currentColor" stroke-width="1.5" />
+                <circle cx="400" cy="260" r="14" fill="var(--paper)" stroke="currentColor" stroke-width="1.5" />
+                <text x="180" y="145" text-anchor="middle" font-size="10" font-weight="bold">1</text>
+                <text x="400" y="145" text-anchor="middle" font-size="10" font-weight="bold">2</text>
+                <text x="180" y="265" text-anchor="middle" font-size="10" font-weight="bold">3</text>
+                <text x="400" y="265" text-anchor="middle" font-size="10" font-weight="bold">4</text>
+              </svg>
+            </div>
+            <div class="specs">
+              <div class="row rv">
+                <div class="n">1</div>
+                <div>
+                  <h4>Drum Tinta Pink</h4>
+                  <p>Menggunakan tinta fluorescent pink untuk highlight.</p>
+                </div>
+              </div>
+              <div class="row rv">
+                <div class="n">2</div>
+                <div>
+                  <h4>Roller Pressure</h4>
+                  <p>Tekanan roller menentukan ketebalan cetakan.</p>
+                </div>
+              </div>
+              <div class="row rv">
+                <div class="n">3</div>
+                <div>
+                  <h4>Paper Feed</h4>
+                  <p>Sistem feed kertas dengan sensor misalignment.</p>
+                </div>
+              </div>
+              <div class="row rv">
+                <div class="n">4</div>
+                <div>
+                  <h4>Drying Zone</h4>
+                  <p>Area pengeringan untuk mencegah smudge.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6 - THE GRAIN -->
+      <section id="grain" class="tint-orange rv">
+        <div class="section-inner">
+          <span class="label rv">Section 6</span>
+          <h2 class="rv">The Grain</h2>
+          <p class="rv">Slider drag untuk membandingkan efek duotone dengan gambar asli.</p>
+          <div class="compare">
+            <div class="layer bottom">
+              <img src="https://picsum.photos/id/237/900/1100" alt="Original" />
+            </div>
+            <div class="layer top">
+              <div class="duo">
+                <img src="https://picsum.photos/id/237/900/1100" alt="Duotone" />
+              </div>
+            </div>
+            <div class="handle"></div>
+            <div class="knob">↔</div>
+            <div class="tag l">Original</div>
+            <div class="tag r">Duotone</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7 - MISPRINT PILE -->
+      <section id="pile" class="tint-pink rv">
+        <div class="section-inner">
+          <span class="label rv">Section 7</span>
+          <h2 class="rv">Misprint Pile</h2>
+          <p class="rv">Kumpulan print eksperimen dengan rotasi acak, hover untuk meluruskan.</p>
+          <div class="pile-wrap">
+            <div class="pile-card rv" style="--rot:-4deg; top:20px; left:10px;">
+              <span class="stamp">MISPRINT #200</span>
+              <div class="tape"></div>
+              <div class="duo">
+                <img src="https://picsum.photos/id/200/400/300" alt="Card 1" />
+              </div>
+              <p class="meta">Offset 2mm, grain 5%</p>
+            </div>
+            <div class="pile-card rv" style="--rot:3deg; top:60px; right:30px;">
+              <span class="stamp">MISPRINT #433</span>
+              <div class="tape"></div>
+              <div class="duo">
+                <img src="https://picsum.photos/id/433/400/300" alt="Card 2" />
+              </div>
+              <p class="meta">Double exposure</p>
+            </div>
+            <div class="pile-card rv" style="--rot:-2deg; top:200px; left:100px;">
+              <span class="stamp">MISPRINT #577</span>
+              <div class="duo">
+                <img src="https://picsum.photos/id/577/400/300" alt="Card 3" />
+              </div>
+              <p class="meta">Color shift</p>
+            </div>
+            <div class="pile-card rv" style="--rot:5deg; top:280px; right:80px;">
+              <span class="stamp">MISPRINT #1062</span>
+              <div class="duo">
+                <img src="https://picsum.photos/id/1062/400/300" alt="Card 4" />
+              </div>
+              <p class="meta">Bleed edge</p>
+            </div>
+            <div class="pile-card rv" style="--rot:-3deg; top:350px; left:200px;">
+              <span class="stamp">MISPRINT #431</span>
+              <div class="tape"></div>
+              <div class="duo">
+                <img src="https://picsum.photos/id/431/400/300" alt="Card 5" />
+              </div>
+              <p class="meta">Partial mask</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="cta-band tint-blue">
+        <div class="section-inner">
+          <p class="rv">Ingin eksplorasi lebih lanjut tentang risograph digital?</p>
+          <a href="#" class="btn-ink rv">Lihat Portofolio Lengkap →</a>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 RAFA OKTA HABIBILAH</p>
+    <footer class="site">
+      <p>&copy; 2026 HALFTONE — RAFA OKTA HABIBILAH</p>
     </footer>
 
     <script type="module" src="/src/main.js"></script>
