@@ -1,63 +1,136 @@
-function setSheetTops() {
-  document.querySelectorAll('main > section').forEach(function(s) {
-    s.style.top = Math.min(0, window.innerHeight - s.offsetHeight) + 'px';
-  });
-}
-window.addEventListener('resize', setSheetTops);
-window.addEventListener('load', setSheetTops);
-setSheetTops();
+/* ============================================
+   MERCURY — Portfolio Interactions
+   ============================================ */
 
-var rvObserver = new IntersectionObserver(function(entries) {
+// --- Navigation scroll effect ---
+var nav = document.getElementById('nav');
+function handleNavScroll() {
+  if (window.scrollY > 40) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+}
+window.addEventListener('scroll', handleNavScroll, { passive: true });
+handleNavScroll();
+
+// --- Mobile nav toggle ---
+var navToggle = document.getElementById('navToggle');
+var navLinks = document.querySelector('.nav-links');
+navToggle.addEventListener('click', function() {
+  navToggle.classList.toggle('active');
+  navLinks.classList.toggle('open');
+});
+
+// Close mobile nav on link click
+document.querySelectorAll('.nav-link').forEach(function(link) {
+  link.addEventListener('click', function() {
+    navToggle.classList.remove('active');
+    navLinks.classList.remove('open');
+  });
+});
+
+// --- Scroll reveal ---
+var revealObserver = new IntersectionObserver(function(entries) {
   entries.forEach(function(entry) {
     if (entry.isIntersecting) {
-      entry.target.classList.add('in');
-      rvObserver.unobserve(entry.target);
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.15 });
-document.querySelectorAll('.rv').forEach(function(el) {
-  rvObserver.observe(el);
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(function(el) {
+  revealObserver.observe(el);
 });
 
-var heroVisual = document.querySelector('.hero-visual');
-var pickerBtns = document.querySelectorAll('.hero-visual .picker button');
-pickerBtns.forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    heroVisual.style.setProperty('--duo-dark', btn.dataset.dark);
-    heroVisual.style.setProperty('--duo-light', btn.dataset.light);
+// --- Add reveal class to sections dynamically ---
+function initRevealElements() {
+  var selectors = [
+    '.section-label',
+    '.section-title',
+    '.card',
+    '.project-card',
+    '.skill-card',
+    '.timeline-item',
+    '.contact-card',
+    '.contact-text',
+    '.contact-form',
+    '.contact-links'
+  ];
+
+  selectors.forEach(function(sel) {
+    document.querySelectorAll(sel).forEach(function(el) {
+      if (!el.classList.contains('reveal')) {
+        el.classList.add('reveal');
+        revealObserver.observe(el);
+      }
+    });
+  });
+}
+
+// --- Smooth scroll for anchor links ---
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+  anchor.addEventListener('click', function(e) {
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
 });
 
-var compare = document.querySelector('.grain .compare');
-if (compare) {
-  var dragging = false;
-  var knob = compare.querySelector('.knob');
-  var handle = compare.querySelector('.handle');
-  var topLayer = compare.querySelector('.top');
+// --- Init ---
+document.addEventListener('DOMContentLoaded', initRevealElements);
 
-  function setCut(clientX) {
-    var rect = compare.getBoundingClientRect();
-    var pct = ((clientX - rect.left) / rect.width) * 100;
-    pct = Math.max(5, Math.min(95, pct));
-    compare.style.setProperty('--cut', pct + '%');
+// --- YouTube Music Player ---
+var musicPlayerContainer = document.getElementById('musicPlayer');
+var musicTrigger = document.getElementById('musicTrigger');
+var ytPlayer = null;
+var isMusicPlaying = false;
+
+function onYouTubeIframeAPIReady() {
+  ytPlayer = new YT.Player('musicPlayer', {
+    videoId: 'aBpYk9vuneE',
+    playerVars: {
+      autoplay: 0,
+      controls: 0,
+      modestbranding: 1,
+      rel: 0,
+      showinfo: 0
+    },
+    events: {
+      onReady: function() {
+        console.log('YouTube player ready');
+      }
+    }
+  });
+}
+
+// Global function for YouTube API
+window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+
+musicTrigger.addEventListener('click', function() {
+  if (!isMusicPlaying && ytPlayer) {
+    ytPlayer.unmute();
+    ytPlayer.playVideo();
+    isMusicPlaying = true;
+    musicTrigger.classList.add('playing');
+  } else if (isMusicPlaying && ytPlayer) {
+    ytPlayer.mute();
+    ytPlayer.pauseVideo();
+    isMusicPlaying = false;
+    musicTrigger.classList.remove('playing');
   }
+});
 
-  knob.addEventListener('pointerdown', function(e) {
-    dragging = true;
-    knob.setPointerCapture(e.pointerId);
-  });
-  handle.addEventListener('pointerdown', function(e) {
-    dragging = true;
-    handle.setPointerCapture(e.pointerId);
-  });
-  document.addEventListener('pointermove', function(e) {
-    if (dragging) setCut(e.clientX);
-  });
-  document.addEventListener('pointerup', function() {
-    dragging = false;
-  });
-}
-
-if (typeof lucide !== 'undefined') {
-  lucide.createIcons();
-}
+// Show hide when tab/window change
+window.addEventListener('visibilitychange', function() {
+  if (ytPlayer && isMusicPlaying) {
+    if (document.hidden) {
+      ytPlayer.mute();
+    } else {
+      ytPlayer.unmute();
+    }
+  }
+});

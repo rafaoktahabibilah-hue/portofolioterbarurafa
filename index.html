@@ -4,308 +4,244 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/jpeg" href="/logoporto.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="HALFTONE — Portofolio visual Rafa dengan estetika risograph dan efek misprint" />
+    <meta name="description" content="Rafa Okta Habibilah — Portofolio Digital" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400..800&display=swap" rel="stylesheet" />
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/src/style.css" />
-    <title>HALFTONE — RAFA OKTA HABIBILAH</title>
+    <title>Rafa — Portofolio</title>
   </head>
   <body>
-    <header class="site">
-      <a href="#hero" class="nav-logo">HALFTONE.</a>
-      <nav class="nav-c">
-        <a href="#hero">Beranda</a>
-        <a href="#idea">Idea</a>
-        <a href="#inks">Inks</a>
-        <a href="#process">Process</a>
-        <a href="#machine">Machine</a>
-        <a href="#grain">Grain</a>
-        <a href="#pile">Pile</a>
-      </nav>
+
+    <!-- NAVIGATION -->
+    <header class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-brand">
+          <span class="nav-logo">R</span>
+          <span class="nav-name">Rafa</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#about" class="nav-link">Tentang</a>
+          <a href="#projects" class="nav-link">Proyek</a>
+          <a href="#skills" class="nav-link">Keahlian</a>
+          <a href="#experience" class="nav-link">Pengalaman</a>
+          <a href="#contact" class="nav-link">Kontak</a>
+        </nav>
+        <a href="#contact" class="btn-cobalt nav-cta">Hubungi Saya</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </header>
 
-    <main>
-      <!-- SECTION 1 - HERO -->
-      <section id="hero" class="tint-pink rv">
-        <div class="section-inner hero">
-          <div>
-            <span class="label rv">Section 1</span>
-            <h1 class="rv">Rol kamera Anda, dibuat <span class="misprint">fisik.</span></h1>
-            <p class="lead rv">Website ini mengeksplorasi estetika risograph print dengan efek misprint, grain overlay, dan duotone filter.</p>
-            <div class="metrics">
-              <div class="metric-div rv">
-                <span class="num">3</span>
-                <span class="lab">Proyek Unggulan</span>
-              </div>
-              <div class="metric-div rv">
-                <span class="num">8+</span>
-                <span class="lab">Foto Risograph</span>
-              </div>
-              <div class="metric-div rv">
-                <span class="num">100%</span>
-                <span class="lab">Manual Set</span>
-              </div>
-            </div>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <img src="/foto.jpg" alt="Hero background" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <span class="hero-label">Portofolio Digital</span>
+        <h1 class="hero-title">Rafa Okta<br/>Habibilah</h1>
+        <p class="hero-sub">Pelajar SMK Telkom Bandung — Desainer & Pengembang Digital yang berfokus pada pengalaman visual yang terukur dan bermakna.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-cobalt btn-lg">Lihat Proyek</a>
+          <a href="#about" class="btn-ghost btn-lg">Tentang Saya</a>
+        </div>
+        <div class="hero-metrics">
+          <div class="metric">
+            <span class="metric-num">3+</span>
+            <span class="metric-label">Proyek Selesai</span>
           </div>
-          <div class="hero-visual rv">
-            <div class="hero-img duo">
-              <img src="Fotogw.jpeg" alt="Hero" />
-            </div>
-            <div class="before-card duo">
-              <img src="https://picsum.photos/id/1025/400/300" alt="Before" />
-            </div>
-            <div class="picker">
-              <button data-dark="#ff48b0" data-light="#2a56d6">
-                <span class="swatch" style="background:#ff48b0"></span>Pink+Blue
-              </button>
-              <button data-dark="#ffd600" data-light="#0fa3a3">
-                <span class="swatch" style="background:#ffd600"></span>Yellow+Teal
-              </button>
-              <button data-dark="#ff5a1f" data-light="#7c3aed">
-                <span class="swatch" style="background:#ff5a1f"></span>Orange+Purple
-              </button>
-            </div>
-            <div class="drums">
-              <div class="drum d1"></div>
-              <div class="drum d2"></div>
-            </div>
-            <svg class="arrow" viewBox="0 0 200 100">
-              <path d="M8 9C72 18 126 48 151 102" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="8 5" />
-            </svg>
+          <div class="metric">
+            <span class="metric-num">2+</span>
+            <span class="metric-label">Tahun Belajar</span>
+          </div>
+          <div class="metric">
+            <span class="metric-num">100%</span>
+            <span class="metric-label">Dedikasi</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SECTION 2 - THE IDEA -->
-      <section id="idea" class="tint-blue rv">
-        <div class="section-inner">
-          <span class="label rv">Section 2</span>
-          <h2 class="rv">The Idea</h2>
-          <div class="split">
-            <div>
-              <p class="rv">Risograph printing adalah teknik cetak digital yang menghasilkan efek unik seperti misprint, grain, dan warna duotone. Website ini mereplikasi estetika itu dengan HTML/CSS murni.</p>
-              <div class="quote-card rv">
-                <p>"Setiap cetakan risograph memiliki karakter uniknya sendiri—tidak ada yang benar-benar sama."</p>
-                <span class="who">— Rafa, SMK Telkom</span>
-              </div>
-            </div>
-            <div class="collage">
-              <div class="frame small duo rv">
-                <img src="https://picsum.photos/id/1080/600/700" alt="Small collage" />
-              </div>
-              <div class="frame big duo rv">
-                <img src="https://picsum.photos/id/64/800/1100" alt="Big collage" />
-              </div>
-              <div class="tape t1"></div>
-              <div class="tape t2"></div>
-            </div>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <span class="section-label">Tentang</span>
+        <h2 class="section-title">Membangun pengalaman digital<br/>yang berdampak.</h2>
+        <div class="about-grid">
+          <div class="card">
+            <h3 class="card-title">Visi</h3>
+            <p class="card-text">Saya percaya desain yang baik bukan hanya tentang estetika, tapi tentang menciptakan solusi yang membuat hidup orang lebih mudah dan bermakna.</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Misi</h3>
+            <p class="card-text">Mengembangkan keterampilan di bidang desain UI/UX dan pengembangan web untuk memberikan kontribusi nyata di industri digital Indonesia.</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Pendekatan</h3>
+            <p class="card-text">Setiap proyek dimulai dengan memahami kebutuhan pengguna, diikuti riset mendalam, dan diakhiri dengan implementasi yang presisi.</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SECTION 3 - THE INKS -->
-      <section id="inks" class="tint-yellow rv">
-        <div class="section-inner">
-          <span class="label rv">Section 3</span>
-          <h2 class="rv">The Inks</h2>
-          <div class="split">
-            <div>
-              <p class="rv">Palet warna duotone menggunakan kombinasi dua warna dengan blend mode multiply dan screen untuk efek cetak risograph yang khas.</p>
+    <!-- PROJECTS -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <span class="section-label">Proyek</span>
+        <h2 class="section-title">Karya pilihan.</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-img">
+              <img src="https://picsum.photos/id/1/800/500" alt="Proyek 1" />
             </div>
-            <div class="grid">
-              <div class="ink-card tall duo rv">
-                <img src="https://picsum.photos/id/1015/400/600" alt="Ink 1" />
-                <div class="label-row">Pink+Blue <span>#ff48b0+#2a56d6</span></div>
-              </div>
-              <div class="ink-card short duo rv">
-                <img src="https://picsum.photos/id/1016/400/400" alt="Ink 2" />
-                <div class="label-row">Yellow+Teal <span>#ffd600+#0fa3a3</span></div>
-              </div>
-              <div class="ink-card tall duo rv">
-                <img src="https://picsum.photos/id/1039/400/600" alt="Ink 3" />
-                <div class="label-row">Orange+Purple <span>#ff5a1f+#7c3aed</span></div>
-              </div>
-              <div class="ink-card short duo rv">
-                <img src="https://picsum.photos/id/1043/400/400" alt="Ink 4" />
-                <div class="label-row">Custom Duo <span>#7c3aed+#0fa3a3</span></div>
-              </div>
+            <div class="project-body">
+              <span class="project-tag">UI/UX Design</span>
+              <h3 class="project-title">Redesign Dashboard Admin</h3>
+              <p class="project-text">Redesain antarmuka dashboard administrasi dengan fokus pada efisiensi navigasi dan kejelasan visual data.</p>
+              <a href="#" class="btn-ghost btn-sm">Selengkapnya</a>
             </div>
+          </article>
+          <article class="project-card">
+            <div class="project-img">
+              <img src="https://picsum.photos/id/2/800/500" alt="Proyek 2" />
+            </div>
+            <div class="project-body">
+              <span class="project-tag">Web Development</span>
+              <h3 class="project-title">Landing Page UMKM</h3>
+              <p class="project-text">Pembuatan landing page responsif untuk bisnis lokal dengan optimasi kecepatan dan SEO.</p>
+              <a href="#" class="btn-ghost btn-sm">Selengkapnya</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-img">
+              <img src="https://picsum.photos/id/3/800/500" alt="Proyek 3" />
+            </div>
+            <div class="project-body">
+              <span class="project-tag">Branding</span>
+              <h3 class="project-title">Identitas Visual Event</h3>
+              <p class="project-text">Perancangan identitas visual lengkap untuk acara teknologi termasuk logo, poster, dan media sosial.</p>
+              <a href="#" class="btn-ghost btn-sm">Selengkapnya</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <span class="section-label">Keahlian</span>
+        <h2 class="section-title">Yang saya kuasai.</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <h4 class="skill-name">UI/UX Design</h4>
+            <p class="skill-desc">Figma, prototyping, wireframing, dan user research untuk antarmuka yang intuitif.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h4 class="skill-name">Web Development</h4>
+            <p class="skill-desc">HTML, CSS, JavaScript, React, dan Vite untuk aplikasi web modern dan cepat.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <h4 class="skill-name">Desain Grafis</h4>
+            <p class="skill-desc">Photoshop, Illustrator, dan Canva untuk kebutuhan visual branding dan marketing.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h4 class="skill-name">Content Creation</h4>
+            <p class="skill-desc">Penulisan konten, copywriting, dan manajemen media sosial untuk strategi digital.</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SECTION 4 - THE PROCESS -->
-      <section id="process" class="tint-purple rv">
-        <div class="section-inner">
-          <span class="label rv">Section 4</span>
-          <h2 class="rv">The Process</h2>
-          <div class="grid">
-            <div class="step rv">
-              <div class="num">1</div>
-              <h3>Upload Foto</h3>
-              <p>Pilih foto dari rol kamera atau upload gambar sendiri.</p>
-            </div>
-            <div class="step rv">
-              <div class="num">2</div>
-              <h3>Pilih Ink Pair</h3>
-              <p>Tentukan kombinasi dua warna untuk efek duotone.</p>
-            </div>
-            <div class="step rv">
-              <div class="num">3</div>
-              <h3>Adjust Grain</h3>
-              <p>Atur tingkat grain overlay dan misprint offset.</p>
-            </div>
-            <div class="step rv">
-              <div class="num">4</div>
-              <h3>Print & Ship</h3>
-              <p>Cetak menggunakan mesin risograph dan kirim fisik.</p>
+    <!-- EXPERIENCE -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <span class="section-label">Pengalaman</span>
+        <h2 class="section-title">Perjalanan saya.</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 — Sekarang</span>
+              <h4 class="timeline-title">SMK Telkom Bandung</h4>
+              <p class="timeline-text">Jurusan Rekayasa Perangkat Lunak. Aktif dalam berbagai proyek sekolah dan kompetisi desain.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- SECTION 5 - THE MACHINE -->
-      <section id="machine" class="tint-flood rv">
-        <div class="section-inner">
-          <span class="label rv">Section 5</span>
-          <h2 class="rv">The Machine</h2>
-          <div class="split">
-            <div class="blueprint rv">
-              <svg viewBox="0 0 640 460">
-                <rect x="40" y="60" width="560" height="340" fill="none" stroke="currentColor" stroke-width="2" />
-                <circle cx="300" cy="200" r="80" fill="var(--pink)" stroke="currentColor" stroke-width="2" />
-                <circle cx="180" cy="140" r="14" fill="var(--paper)" stroke="currentColor" stroke-width="1.5" />
-                <circle cx="400" cy="140" r="14" fill="var(--paper)" stroke="currentColor" stroke-width="1.5" />
-                <circle cx="180" cy="260" r="14" fill="var(--paper)" stroke="currentColor" stroke-width="1.5" />
-                <circle cx="400" cy="260" r="14" fill="var(--paper)" stroke="currentColor" stroke-width="1.5" />
-                <text x="180" y="145" text-anchor="middle" font-size="10" font-weight="bold">1</text>
-                <text x="400" y="145" text-anchor="middle" font-size="10" font-weight="bold">2</text>
-                <text x="180" y="265" text-anchor="middle" font-size="10" font-weight="bold">3</text>
-                <text x="400" y="265" text-anchor="middle" font-size="10" font-weight="bold">4</text>
-              </svg>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2025</span>
+              <h4 class="timeline-title">Magang — Desain UI/UX</h4>
+              <p class="timeline-text">Mengerjakan proyek redesign aplikasi mobile untuk klien UMKM lokal di Bandung.</p>
             </div>
-            <div class="specs">
-              <div class="row rv">
-                <div class="n">1</div>
-                <div>
-                  <h4>Drum Tinta Pink</h4>
-                  <p>Menggunakan tinta fluorescent pink untuk highlight.</p>
-                </div>
-              </div>
-              <div class="row rv">
-                <div class="n">2</div>
-                <div>
-                  <h4>Roller Pressure</h4>
-                  <p>Tekanan roller menentukan ketebalan cetakan.</p>
-                </div>
-              </div>
-              <div class="row rv">
-                <div class="n">3</div>
-                <div>
-                  <h4>Paper Feed</h4>
-                  <p>Sistem feed kertas dengan sensor misalignment.</p>
-                </div>
-              </div>
-              <div class="row rv">
-                <div class="n">4</div>
-                <div>
-                  <h4>Drying Zone</h4>
-                  <p>Area pengeringan untuk mencegah smudge.</p>
-                </div>
-              </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024</span>
+              <h4 class="timeline-title">Lomba Desain Digital</h4>
+              <p class="timeline-text">Meraih juara 2 dalam kompetisi desain antar-SMK se-Jawa Barat.</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SECTION 6 - THE GRAIN -->
-      <section id="grain" class="tint-orange rv">
-        <div class="section-inner">
-          <span class="label rv">Section 6</span>
-          <h2 class="rv">The Grain</h2>
-          <p class="rv">Slider drag untuk membandingkan efek duotone dengan gambar asli.</p>
-          <div class="compare">
-            <div class="layer bottom">
-              <img src="https://picsum.photos/id/237/900/1100" alt="Original" />
-            </div>
-            <div class="layer top">
-              <div class="duo">
-                <img src="https://picsum.photos/id/237/900/1100" alt="Duotone" />
-              </div>
-            </div>
-            <div class="handle"></div>
-            <div class="knob">↔</div>
-            <div class="tag l">Original</div>
-            <div class="tag r">Duotone</div>
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <span class="section-label">Kontak</span>
+          <h2 class="section-title">Mari terhubung.</h2>
+          <p class="contact-text">Tertarik untuk berkolaborasi atau sekadar berbincang? Jangan ragu untuk menghubungi saya.</p>
+          <div class="contact-form">
+            <input type="email" class="input-pill" placeholder="Masukkan email Anda" />
+            <button class="btn-cobalt">Kirim Pesan</button>
+          </div>
+          <div class="contact-links">
+            <a href="https://github.com" target="_blank" class="btn-ghost btn-sm">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" class="btn-ghost btn-sm">LinkedIn</a>
+            <a href="https://instagram.com" target="_blank" class="btn-ghost btn-sm">Instagram</a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SECTION 7 - MISPRINT PILE -->
-      <section id="pile" class="tint-pink rv">
-        <div class="section-inner">
-          <span class="label rv">Section 7</span>
-          <h2 class="rv">Misprint Pile</h2>
-          <p class="rv">Kumpulan print eksperimen dengan rotasi acak, hover untuk meluruskan.</p>
-          <div class="pile-wrap">
-            <div class="pile-card rv" style="--rot:-4deg; top:20px; left:10px;">
-              <span class="stamp">MISPRINT #200</span>
-              <div class="tape"></div>
-              <div class="duo">
-                <img src="https://picsum.photos/id/200/400/300" alt="Card 1" />
-              </div>
-              <p class="meta">Offset 2mm, grain 5%</p>
-            </div>
-            <div class="pile-card rv" style="--rot:3deg; top:60px; right:30px;">
-              <span class="stamp">MISPRINT #433</span>
-              <div class="tape"></div>
-              <div class="duo">
-                <img src="https://picsum.photos/id/433/400/300" alt="Card 2" />
-              </div>
-              <p class="meta">Double exposure</p>
-            </div>
-            <div class="pile-card rv" style="--rot:-2deg; top:200px; left:100px;">
-              <span class="stamp">MISPRINT #577</span>
-              <div class="duo">
-                <img src="https://picsum.photos/id/577/400/300" alt="Card 3" />
-              </div>
-              <p class="meta">Color shift</p>
-            </div>
-            <div class="pile-card rv" style="--rot:5deg; top:280px; right:80px;">
-              <span class="stamp">MISPRINT #1062</span>
-              <div class="duo">
-                <img src="https://picsum.photos/id/1062/400/300" alt="Card 4" />
-              </div>
-              <p class="meta">Bleed edge</p>
-            </div>
-            <div class="pile-card rv" style="--rot:-3deg; top:350px; left:200px;">
-              <span class="stamp">MISPRINT #431</span>
-              <div class="tape"></div>
-              <div class="duo">
-                <img src="https://picsum.photos/id/431/400/300" alt="Card 5" />
-              </div>
-              <p class="meta">Partial mask</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA SECTION -->
-      <section class="cta-band tint-blue">
-        <div class="section-inner">
-          <p class="rv">Ingin eksplorasi lebih lanjut tentang risograph digital?</p>
-          <a href="#" class="btn-ink rv">Lihat Portofolio Lengkap →</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site">
-      <p>&copy; 2026 HALFTONE — RAFA OKTA HABIBILAH</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="footer-text">&copy; 2026 Rafa Okta Habibilah. Seluruh hak dilindungi.</p>
+        <p class="footer-disclaimer">Portofolio ini dibangun dengan dedikasi dan semangat belajar tanpa henti.</p>
+      </div>
     </footer>
 
+    <!-- Music Player Trigger -->
+    <button id="musicTrigger" class="music-trigger" aria-label="Putar musik">
+      <span class="trigger-icon">🎵</span>
+      <span class="trigger-text">Putar Musik</span>
+    </button>
+
+    <!-- YouTube Iframe Player (unmuted playback via API) -->
+    <div id="musicPlayer" class="music-player" style="position:fixed;bottom:10px;right:24px;z-index:1000;"></div>
+
+    <!-- YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
+
