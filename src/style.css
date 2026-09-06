@@ -568,6 +568,98 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================================
+   SERVICES
+   ============================================ */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-24);
+}
+
+.service-card {
+  background: var(--color-graphite-card);
+  border-radius: var(--radius-cards);
+  padding: var(--card-padding);
+  border: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.service-card:hover {
+  border-color: var(--color-cobalt);
+}
+
+/* ============================================
+   ACHIEVEMENTS
+   ============================================ */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-24);
+}
+
+.achievement-card {
+  background: var(--color-graphite-card);
+  border-radius: var(--radius-cards);
+  padding: var(--card-padding);
+  border-top: 2px solid var(--color-cobalt);
+  transition: border-color 0.3s;
+}
+
+.achievement-card:hover {
+  border-top-color: var(--color-ivory-text);
+}
+
+.achievement-num {
+  display: block;
+  font-size: var(--text-heading-lg);
+  font-weight: var(--weight-480);
+  letter-spacing: var(--tracking-heading);
+  color: var(--color-cobalt);
+  margin-bottom: var(--spacing-12);
+}
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-24);
+}
+
+.testimonial-card {
+  background: var(--color-onyx-canvas);
+  border-radius: var(--radius-cards);
+  padding: var(--card-padding);
+  border: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.testimonial-card:hover {
+  border-color: var(--color-slate-border);
+}
+
+.testimonial-stars {
+  color: var(--color-cobalt);
+  font-size: var(--text-body-lg);
+  letter-spacing: 0.2em;
+  margin-bottom: var(--spacing-20);
+}
+
+.testimonial-card .card-text {
+  margin-bottom: var(--spacing-20);
+}
+
+.testimonial-who {
+  display: block;
+  font-size: var(--text-caption);
+  font-weight: var(--weight-480);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--color-ivory-text);
+}
+
+/* ============================================
    TIMELINE
    ============================================ */
 .timeline {
@@ -786,9 +878,12 @@ a { color: inherit; text-decoration: none; }
   }
 
   .about-grid,
-  .projects-grid { grid-template-columns: 1fr; }
+  .projects-grid,
+  .testimonials-grid { grid-template-columns: 1fr; }
 
-  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .skills-grid,
+  .services-grid,
+  .achievements-grid { grid-template-columns: repeat(2, 1fr); }
 
   .hero-title { font-size: clamp(36px, 8vw, 56px); }
   .hero-metrics { gap: var(--spacing-24); }
@@ -797,7 +892,9 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 560px) {
   .section { padding: var(--spacing-56) var(--spacing-16); }
   .nav { padding: 0 var(--spacing-16); }
-  .skills-grid { grid-template-columns: 1fr; }
+  .skills-grid,
+  .services-grid,
+  .achievements-grid { grid-template-columns: 1fr; }
   .hero-content { padding: var(--spacing-24); }
   .hero-actions { flex-direction: column; }
   .contact-form { flex-direction: column; align-items: center; }
