@@ -59,7 +59,9 @@ function initRevealElements() {
     '.contact-card',
     '.contact-text',
     '.contact-form',
-    '.contact-links'
+    '.contact-links',
+    '.about-photo',
+    '.about-bio'
   ];
 
   selectors.forEach(function(sel) {

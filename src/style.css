@@ -274,30 +274,18 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 25%, rgba(82, 102, 235, 0.12), transparent 70%),
+    radial-gradient(ellipse 55% 45% at 80% 75%, rgba(82, 102, 235, 0.08), transparent 70%);
 }
 
-.hero-bg {
+.hero::before {
+  content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
-}
-
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(0.6) brightness(0.5);
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(23, 23, 33, 0.6) 0%,
-    rgba(23, 23, 33, 0.85) 60%,
-    rgba(23, 23, 33, 1) 100%
-  );
+  background-image: radial-gradient(rgba(237, 237, 243, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
 }
 
 .hero-content {
@@ -425,6 +413,92 @@ a { color: inherit; text-decoration: none; }
 
 .card:hover {
   border-color: var(--color-slate-border);
+}
+
+/* ============================================
+   ABOUT / PERKENALAN
+   ============================================ */
+.about-split {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: var(--spacing-56);
+  align-items: center;
+  margin-bottom: var(--spacing-72);
+}
+
+.about-photo {
+  border-radius: var(--radius-cards);
+  overflow: hidden;
+  border: 1px solid var(--color-obsidian-button);
+  position: relative;
+}
+
+.about-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--color-cobalt);
+  border-radius: 12px;
+  pointer-events: none;
+  transform: translate(8px, 8px);
+  z-index: -1;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.85);
+}
+
+.about-name {
+  font-size: var(--text-heading);
+  font-weight: var(--weight-480);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  color: var(--color-ivory-text);
+  margin-bottom: var(--spacing-20);
+}
+
+.about-highlight {
+  color: var(--color-cobalt);
+}
+
+.about-text {
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  line-height: 1.7;
+  color: var(--color-ash-text);
+  margin-bottom: var(--spacing-16);
+}
+
+.about-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-16);
+  margin: var(--spacing-24) 0 var(--spacing-32);
+}
+
+.about-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding: var(--spacing-16);
+  background: var(--color-graphite-card);
+  border-radius: 8px;
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-400);
+  color: var(--color-ivory-text);
+}
+
+.about-info-item span {
+  font-size: var(--text-caption);
+  font-weight: var(--weight-480);
+  letter-spacing: var(--tracking-caption);
+  text-transform: uppercase;
+  color: var(--color-cobalt);
 }
 
 .about-grid {
@@ -866,6 +940,11 @@ a { color: inherit; text-decoration: none; }
   .projects-grid,
   .testimonials-grid { grid-template-columns: 1fr; }
 
+  .about-split {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-32);
+  }
+
   .skills-grid,
   .services-grid,
   .achievements-grid { grid-template-columns: repeat(2, 1fr); }
@@ -880,6 +959,8 @@ a { color: inherit; text-decoration: none; }
   .skills-grid,
   .services-grid,
   .achievements-grid { grid-template-columns: 1fr; }
+  .about-split { grid-template-columns: 1fr; }
+  .about-info { grid-template-columns: 1fr; }
   .hero-content { padding: var(--spacing-24); }
   .hero-actions { flex-direction: column; }
   .contact-form { flex-direction: column; align-items: center; }
