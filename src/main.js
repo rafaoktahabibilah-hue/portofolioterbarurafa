@@ -53,7 +53,7 @@ function initRevealElements() {
     '.project-card',
     '.skill-card',
     '.service-card',
-    '.achievement-card',
+    '.achievement-featured',
     '.testimonial-card',
     '.timeline-item',
     '.contact-card',
